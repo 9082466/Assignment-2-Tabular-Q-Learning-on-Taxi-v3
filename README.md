@@ -69,27 +69,29 @@ pip install numpy
 # Running the Project
 
 Default Run (All Experiments)
+
 python assignment2_taxi_qlearning.py
 
 This will:
-Train baseline configuration
-Run alpha experiments
-Run epsilon experiments
-Select best configuration
-Re-run best configuration
-Save plots to assignment2_outputs/
+* Train baseline configuration
+* Run alpha experiments
+* Run epsilon experiments
+* Select best configuration
+* Re-run best configuration
+* Save plots to assignment2_outputs/
 
 # Output Plots
 Generated in:
+
 assignment2_outputs/
-returns_moving_avg.png
-steps_moving_avg.png
+* returns_moving_avg.png
+* steps_moving_avg.png
 
 These show:
-Moving average return per episode
-Moving average steps per episode
-Convergence behavior
-Hyperparameter sensitivity
+* Moving average return per episode
+* Moving average steps per episode
+* Convergence behavior
+* Hyperparameter sensitivity
 
 # Hyperparameter Experiments
 Baseline
@@ -113,7 +115,7 @@ Lowest average steps
 # Render Best Learned Policy
 python assignment2_taxi_qlearning.py --render-best
 
-Render multiple episodes:
+# Render multiple episodes:
 python assignment2_taxi_qlearning.py --render-best --render-episodes 3
 
 # Log Training Actions (Detailed Q-Update Logging)
@@ -121,7 +123,9 @@ python assignment2_taxi_qlearning.py --render-best --render-episodes 3
 To record state-action updates during training:
 python assignment2_taxi_qlearning.py --log-actions
 Optional controls:
+
 --log-actions-episodes 2
+
 --log-actions-max-steps 200
 
 This generates CSV files containing:

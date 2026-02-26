@@ -1,11 +1,11 @@
-* Assignment 2 — Tabular Q-Learning on Taxi-v3
+# Assignment 2 — Tabular Q-Learning on Taxi-v3
 CSCN8020 — Reinforcement Learning
 
 Student: Abdala
 Environment: Taxi-v3
 Algorithm: Tabular Q-Learning
 
-* Project Overview
+# Project Overview
 
 This project implements Tabular Q-Learning to solve the Taxi-v3 reinforcement learning environment using the Gymnasium library.
 
@@ -35,7 +35,7 @@ Action logging (CSV)
 
 Rendered episode trace export (CSV)
 
-* Q-Learning Background
+# Q-Learning Background
 
 The Q-Learning update rule used is:
 
@@ -50,14 +50,14 @@ Where:
 
 An ε-greedy policy is used for exploration.
 
-* Project Structure
+# Project Structure
 
 assignment2_taxi_qlearning.py   # Main experiment runner
 assignment2_utils.py            # Environment utilities & rendering
 assignment2_outputs/            # Generated plots
 README.md  
 
-Installation
+# Installation
 1. Create Virtual Environment (Recommended)
 python -m venv .venv
 .venv\Scripts\activate
@@ -66,7 +66,7 @@ pip install gymnasium
 pip install matplotlib
 pip install numpy
 
-* Running the Project
+# Running the Project
 
 Default Run (All Experiments)
 python assignment2_taxi_qlearning.py
@@ -79,7 +79,7 @@ Select best configuration
 Re-run best configuration
 Save plots to assignment2_outputs/
 
-* Output Plots
+# Output Plots
 Generated in:
 assignment2_outputs/
 returns_moving_avg.png
@@ -91,7 +91,7 @@ Moving average steps per episode
 Convergence behavior
 Hyperparameter sensitivity
 
-* Hyperparameter Experiments
+# Hyperparameter Experiments
 Baseline
 α = 0.1
 ε = 0.1
@@ -110,13 +110,13 @@ The best configuration is selected based on:
 Highest average return
 Lowest average steps
 
-* Render Best Learned Policy
+# Render Best Learned Policy
 python assignment2_taxi_qlearning.py --render-best
 
 Render multiple episodes:
 python assignment2_taxi_qlearning.py --render-best --render-episodes 3
 
-* Log Training Actions (Detailed Q-Update Logging)
+# Log Training Actions (Detailed Q-Update Logging)
 
 To record state-action updates during training:
 python assignment2_taxi_qlearning.py --log-actions
@@ -128,7 +128,7 @@ This generates CSV files containing:
 State, Action, Reward, Q-value before update, Q-value after update, TD target, TD error and Epsilon used
 Useful for debugging and analysis.
 
-* Key Observations
+# Key Observations
 
 Larger α (0.2) converges faster than smaller values.
 Extremely small α slows learning dramatically.
